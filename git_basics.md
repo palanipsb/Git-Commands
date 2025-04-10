@@ -1,4 +1,4 @@
-# Git
+# Git Commands - Basics
 ## Git history
     .git # this folder holds the folders and files and history
 
@@ -65,6 +65,9 @@ git clone                       # Clones a remote repository to your local machi
 ## Branching Commands
     We shoud never commit to the main branch
     HEAD - All the changes we made will go to the HEAD poiter that poiting to a branch
+    Fork - We can fork other's branch and do changes, so it will be ou copy and it wont affect other's branch and not allowed also.
+    upstream - we add remote other's git URL to our local, which is upstream URL.
+    pullrequest
 
 ```sh
 
