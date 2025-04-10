@@ -38,4 +38,45 @@ git clean -fd               # Remove untracked files and directories
 ## Staging and Stashing Commands
 ```sh
 
+git stash                   # Temporarily saves changes that are not ready to commit.
+git stash pop               # Applies the most recent stash and removes it from the stash list.
+git stash list              # Lists all stashes saved in the repository.
+git stash drop stash@{n}    # Removes a specific stash entry.
+git stash apply stash@{n}   # Applies a stash without removing it from the stash list.
+git stash clear             # Removes a last stash entry.
+
+```
+
+## Collaboration Commands
+
+```sh
+
+git remote add <name> <url>     # Manages connections to remote repositories.
+git remote remove <name>        # Manages connections to remote repositories.
+
+git fetch                       # Downloads changes from a remote repository without applying them.
+git pull                        # Fetches changes from a remote repository and merges them into the current branch.
+
+git push origin <branch-name>   # Uploads local commits to a remote repository.
+git clone                       # Clones a remote repository to your local machine.
+
+```
+
+## Branching Commands
+    We shoud never commit to the main branch
+    HEAD - All the changes we made will go to the HEAD poiter that poiting to a branch
+
+```sh
+
+git branch                      # List branches 
+git branch <branch-name>        # Create a branch 
+git branch -d <branch-name>     # Delete a branch
+
+git checkout <branch-name>      # Switches to a branch.
+git checkout <commit-hash>      # Switches to a specific commit.
+
+git switch <branch-name>        # Switches branches (an alternative to git checkout).
+git merge <branch-name>         # Combines changes from one branch into another.
+git rebase <branch-name>        # Reapplies commits from one branch onto another, rewriting history.
+
 ```
