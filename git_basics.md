@@ -83,3 +83,21 @@ git merge <branch-name>         # Combines changes from one branch into another.
 git rebase <branch-name>        # Reapplies commits from one branch onto another, rewriting history.
 
 ```
+
+## Viewing History
+
+```sh
+
+git reflog                      # Displays a log of all reference changes (branch and HEAD movements).
+git blame <file-name>           # Shows who made changes to each line of a file.
+git shortlog                    # Summarizes commit history by author.
+git log --graph                 # Displays a visual representation of the commit history. 
+
+```
+
+## Cherry-Picking and Rebasing
+
+```sh
+
+git cherry-pick <commit-hash>       # Applies specific commits from one branch to another.
+git rebase -i HEAD~3                # Squash, edit, or reorder commits during a rebase.
