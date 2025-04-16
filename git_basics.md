@@ -101,3 +101,136 @@ git log --graph                 # Displays a visual representation of the commit
 
 git cherry-pick <commit-hash>       # Applies specific commits from one branch to another.
 git rebase -i HEAD~3                # Squash, edit, or reorder commits during a rebase.
+
+```
+## Git bisect
+
+```sh
+
+git bisect start        # Finds the commit that introduced a bug using binary search.
+git bisect bad
+git bisect good
+
+```
+## Git Tag
+
+```sh
+
+git tag <tag-name>                  # Creates, lists, or deletes tags for specific commits.
+git tag -a <tag-name> -m "message"  # Creates, lists, or deletes tags for specific commits.
+
+```
+## Git archive
+
+```sh
+
+git archive --format=zip HEAD > repo.zip    # Creates an archive of the repository files.
+
+```
+
+## Git Submodules
+
+```sh
+
+git submodule add <repo-url>        # Manages submodules (nested repositories).
+git submodule update
+
+```
+
+## Git worktree
+
+```sh
+
+git worktree add <path> <branch>    # Adds multiple working directories for the same repository.
+
+```
+
+## Aliases and Shortcuts 
+
+```sh
+
+git config --global alias.co checkout # Creates shortcuts for frequently used commands.
+git config --gobal alias.br branch
+
+```
+
+## Debugging Commands 
+
+```sh
+
+git diff <commit-hash1> <commit-has2>   # Compares changes between different commits, branches, or working directories.
+git diff main feature
+
+git log --start                         # Shows commit history with a summary of changes for each commit.
+git grep "search-string"                # Searches for a string or pattern in your repository.
+git bisect run <script>                 # Automates git bisect using a script to test each commit.
+git fsck                                # Verifies the integrity of the Git repository.
+git log -S "search-term"                # Searches for commits where a string was added or removed. 
+git show-branch                         # Displays the branch history in a compact form.
+git rev-parse HEAD                      # Converts branch names or tags into commit hashes.
+git whatchanged                         # Shows the file-level changes for each commit.
+
+```
+
+## Patch Management
+
+```sh
+
+git format-patch HEAD~3     # Generates patch files from commits.
+git apply <patch-file>      # Applies a patch file to the working directory.
+git am <patch-file>         # Applies patches and creates commits from them.
+git diff --cached           # Shows the differences between the staging area and the last commit.
+git reset HEAD <file>       # Unstages a file, moving it back to the working directory.
+
+```
+
+## Collaborative Workflow Commands
+
+```sh
+
+git push --force            # Force pushes changes to a remote branch (used cautiously).
+git fetch --prune           # Cleans up deleted remote branches locally.
+git pull --rebase           # Rebases instead of merging during a pull operation.
+git remote prune origin     # Removes references to deleted remote branches. 
+git cherry main feature     # Lists commits in the current branch that are not in the target branch.
+
+```
+
+## Rewriting History
+
+```sh
+
+git rebase --onto <new-base> <upstream> <branch>    # Rebases a range of commits onto a different branch.
+git filter-branch --env-fiter '..'HEAD              # Rewrites commit history for advanced filtering.
+git replace <commit-hash1> <commit-hash2>           # Replaces a commit with another. 
+git reset --merge                                   # Resets the working directory and index, preserving uncommitted changes.
+git commit --amend                                  # Modifies the most recent commit message or adds changes to it. 
+
+```
+
+## Advanced Commands
+
+```sh
+
+git reflog expire --all --expire=now    # Clears old or unnecessary reflog entries. 
+git gc                                  # Cleans up unnecessary files and optimizes the repository. 
+git worktree prune                      # Cleans up old worktree references.
+git prune                               # Cleans up unreachable objects.
+git is-tree HEAD                        # Displays the content of a tree object in Git.
+
+```
+
+## Security and Authentication
+
+```sh
+
+git credential approve              # Manages Git credentials. 
+git config --list                   # Lists all configuration settings.
+git verify-commit <commit-hash>     # Verifies signed commits. 
+
+```
+
+## Complete Categories Overview 
+
+![alt text](<All category.png>)
+![alt text](<All category 2.png>)
