@@ -3,6 +3,7 @@
     .git # this folder holds the folders and files and history
 
 ## Add code basic commands 
+
 ```sh
 
 git init                    # Initializes a new Git repository in the current directory.
